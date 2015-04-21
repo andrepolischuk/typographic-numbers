@@ -1,0 +1,24 @@
+{
+  "name": "typographic-numbers",
+  "description": "Micro module for formatting numbers",
+  "version": "0.0.0",
+  "keywords": [
+    "typographic",
+    "formatting",
+    "numbers",
+    "textr"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andrepolischuk/typographic-numbers.git"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Andrey Polischuk <andre.polischuk@gmail.com>",
+  "license": "MIT"
+}
