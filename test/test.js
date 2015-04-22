@@ -20,4 +20,9 @@ describe('numbers(input)', function() {
     assert(numbers('15215 and 15215,215') === '15,215 and 15,215.215');
     assert(numbers('9015215 and 9015215.215') === '9,015,215 and 9,015,215.215');
   });
+
+  it('should return not changed string for undefined locale', function() {
+    assert(numbers('215.215', {locale: 'rs_RU'}) === '215.215');
+    assert(numbers('15215,215', {locale: 'rs_RU'}) === '15215,215');
+  });
 });

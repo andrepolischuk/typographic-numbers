@@ -18,12 +18,11 @@ var locales = require('./locales');
 module.exports = function(input, opts) {
   opts = opts || {};
 
-  var loc = locales['locale' in opts &&
-    opts.locale in locales ?
-    opts.locale : 'en_US'];
+  var sep = locales[opts.locale || 'en_US'];
+  if (!sep) return input;
 
   return input.replace(/(\d+)[\.,]*(\d*)/gim, function(match, num, dec) {
-    return format(+num, loc.charAt(0)) + (dec ? loc.charAt(1) + dec : '');
+    return format(+num, sep.charAt(0)) + (dec ? sep.charAt(1) + dec : '');
   });
 };
 
