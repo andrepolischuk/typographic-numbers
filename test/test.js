@@ -25,4 +25,9 @@ describe('numbers(input)', function() {
     assert(numbers('215.215', {locale: 'rs_RU'}) === '215.215');
     assert(numbers('15215,215', {locale: 'rs_RU'}) === '15215,215');
   });
+
+  it('should fix numbers via case-insensitive locale', function() {
+    assert(numbers('215.215', {locale: 'ru_RU'}) === '215,215');
+    assert(numbers('15215,215', {locale: 'ru_ru'}) === '15 215,215');
+  });
 });

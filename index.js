@@ -18,7 +18,9 @@ var locales = require('./locales');
 module.exports = function(input, opts) {
   opts = opts || {};
 
-  var sep = locales[opts.locale || 'en_US'];
+  var locale = opts.locale || 'en_US';
+  var sep = locales[locale.toLowerCase()];
+
   if (!sep) return input;
 
   return input.replace(/(\d+)[\.,]*(\d*)/gim, function(match, num, dec) {
