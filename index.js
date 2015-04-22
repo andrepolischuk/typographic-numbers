@@ -29,10 +29,11 @@ module.exports = function(input, opts) {
 };
 
 /**
- * Integer transformation
+ * Integer part transformation
  *
  * @param  {Number} int
  * @param  {String} sep
+ * @return {String}
  * @api private
  */
 
