@@ -22,12 +22,12 @@ describe('numbers(input)', function() {
   });
 
   it('should return not changed string for undefined locale', function() {
-    assert(numbers('215.215', {locale: 'rs_RU'}) === '215.215');
-    assert(numbers('15215,215', {locale: 'rs_RU'}) === '15215,215');
+    assert(numbers('215.215', {locale: 'rs-ru'}) === '215.215');
+    assert(numbers('15215,215', {locale: 'rs-ru'}) === '15215,215');
   });
 
   it('should fix numbers via case-insensitive locale', function() {
-    assert(numbers('215.215', {locale: 'ru_RU'}) === '215,215');
-    assert(numbers('15215,215', {locale: 'ru_ru'}) === '15 215,215');
+    assert(numbers('215.215', {locale: 'ru-RU'}) === '215,215');
+    assert(numbers('15215,215', {locale: 'ru-ru'}) === '15 215,215');
   });
 });

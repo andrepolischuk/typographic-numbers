@@ -18,7 +18,7 @@ var locales = require('./locales');
 module.exports = function(input, opts) {
   opts = opts || {};
 
-  var locale = opts.locale || 'en_US';
+  var locale = opts.locale || 'en-us';
   var sep = locales[locale.toLowerCase()];
 
   if (!sep) return input;
