@@ -10,9 +10,8 @@ $ npm install --save typographic-numbers
 
 ## Usage
 
-  Use typographic numbers depending on your locale for proper thousand
-  separator and decimal point. Use ISO 639 codes to specify locale,
-  example `en-uk`, `ru-ru`, `da`.
+  Use typographic numbers depending on your locale for proper thousand separator and decimal point.
+  Use [ISO 639](http://www.wikiwand.com/en/List_of_ISO_639-1_codes) codes to specify locale, example `en-uk`, `ru-ru`, `da`.
 
 ```js
 var numbers = require('typographic-numbers');
