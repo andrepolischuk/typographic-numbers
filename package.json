@@ -8,10 +8,7 @@
     "numbers",
     "textr"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/andrepolischuk/typographic-numbers.git"
-  },
+  "repository": "andrepolischuk/typographic-numbers",
   "devDependencies": {
     "mocha": "^2.2.4"
   },
