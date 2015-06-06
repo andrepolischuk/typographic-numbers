@@ -2,10 +2,10 @@
 
   > Micro module for formatting numbers
 
-## Instalation
+## Install
 
 ```sh
-$ npm install --save typographic-numbers
+npm install --save typographic-numbers
 ```
 
 ## Usage

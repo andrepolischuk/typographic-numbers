@@ -1,7 +1,7 @@
 
 'use strict';
 
-var numbers = require('..');
+var numbers = require('./');
 var assert = require('assert');
 
 describe('numbers(input)', function() {
