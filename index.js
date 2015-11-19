@@ -1,41 +1,16 @@
-
 'use strict';
-
-/**
- * Localizaions
- */
-
 var locales = require('./locales');
 
-/**
- * Expose transformation
- *
- * @param  {String} input
- * @return {String}
- * @api public
- */
-
-module.exports = function(input, opts) {
+module.exports = function (input, opts) {
   opts = opts || {};
-
   var locale = opts.locale || 'en-us';
   var sep = locales[locale.toLowerCase()];
-
   if (!sep) return input;
 
-  return input.replace(/(\d+)[\.,]*(\d*)/gim, function(match, num, dec) {
+  return input.replace(/(\d+)[\.,]*(\d*)/gim, function (match, num, dec) {
     return format(+num, sep.charAt(0)) + (dec ? sep.charAt(1) + dec : '');
   });
 };
-
-/**
- * Integer part transformation
- *
- * @param  {Number} int
- * @param  {String} sep
- * @return {String}
- * @api private
- */
 
 function format(int, sep) {
   var str = '';
