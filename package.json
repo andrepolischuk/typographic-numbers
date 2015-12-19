@@ -1,7 +1,7 @@
 {
   "name": "typographic-numbers",
   "description": "Micro module for formatting numbers",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "keywords": [
     "typographic",
     "formatting",
