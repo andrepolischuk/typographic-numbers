@@ -1,12 +1,12 @@
-'use strict';
-var numbersDB = require('typographic-numbers-l10n-db');
-var americanExpress = '3[47]\\d\\d(?:\\s\\d{4}){2}\\s\\d{3}';
-var maestro = '(?:5[0678]\\d\\d|6304|6390|67\\d\\d)(?:\\s\\d{4}){2}(?:\\s\\d{1,7})?';
-var mastercard = '5[1-5]\\d\\d(?:\\s\\d{4}){3}';
-var visa = '4\\d{3}(?:\\s\\d{4}){2}\\s\\d(?:\\d{3})?';
-var number = '\\d+';
+import db from 'typographic-numbers-l10n-db';
 
-var numberRegExp = new RegExp('(' + [
+const americanExpress = '3[47]\\d\\d(?:\\s\\d{4}){2}\\s\\d{3}';
+const maestro = '(?:5[0678]\\d\\d|6304|6390|67\\d\\d)(?:\\s\\d{4}){2}(?:\\s\\d{1,7})?';
+const mastercard = '5[1-5]\\d\\d(?:\\s\\d{4}){3}';
+const visa = '4\\d{3}(?:\\s\\d{4}){2}\\s\\d(?:\\d{3})?';
+const number = '\\d+';
+
+const numberRegExp = new RegExp('(' + [
   americanExpress,
   maestro,
   mastercard,
@@ -14,21 +14,19 @@ var numberRegExp = new RegExp('(' + [
   number
 ].join('|') + ')(?:[.,](\\d+))?', 'gm');
 
-module.exports = function (input, opts) {
-  opts = opts || {};
-  var locale = opts.locale || 'en-us';
-  var sep = numbersDB[locale.toLowerCase()];
+export default function typographicNumbers(input = '', {locale = 'en-us'} = {}) {
+  const sep = db[locale.toLowerCase()];
   if (!sep) return input;
 
-  return input.replace(numberRegExp, function (match, num, dec) {
+  return input.replace(numberRegExp, (match, num, dec) => {
     if (num.indexOf(' ') > 0) return match;
     return format(+num, sep.charAt(0)) + (dec ? sep.charAt(1) + dec : '');
   });
 };
 
 function format(int, sep) {
-  var str = '';
-  var n;
+  let str = '';
+  let n;
 
   while (int) {
     n = int % 1e3;
