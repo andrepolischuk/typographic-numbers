@@ -10,7 +10,7 @@
   ],
   "repository": "andrepolischuk/typographic-numbers",
   "devDependencies": {
-    "ava": "^0.8.0"
+    "ava": "^0.10.0"
   },
   "main": "index.js",
   "scripts": {
