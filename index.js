@@ -14,7 +14,7 @@ const numberRegExp = new RegExp('(' + [
   number
 ].join('|') + ')(?:[.,](\\d+))?', 'gm');
 
-export default function typographicNumbers(input = '', {locale = 'en-us'} = {}) {
+export default function typographicNumbers(input = '', {locale = ''} = {}) {
   const sep = db[locale.toLowerCase()];
   if (!sep) return input;
 
