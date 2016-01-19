@@ -9,6 +9,9 @@
     "textr"
   ],
   "repository": "andrepolischuk/typographic-numbers",
+  "dependencies": {
+    "typographic-numbers-l10n-db": "^0.1.0"
+  },
   "devDependencies": {
     "ava": "^0.10.0"
   },

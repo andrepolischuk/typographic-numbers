@@ -1,5 +1,5 @@
 'use strict';
-var locales = require('./locales');
+var numbersDB = require('typographic-numbers-l10n-db');
 var americanExpress = '3[47]\\d\\d(?:\\s\\d{4}){2}\\s\\d{3}';
 var maestro = '(?:5[0678]\\d\\d|6304|6390|67\\d\\d)(?:\\s\\d{4}){2}(?:\\s\\d{1,7})?';
 var mastercard = '5[1-5]\\d\\d(?:\\s\\d{4}){3}';
@@ -17,7 +17,7 @@ var numberRegExp = new RegExp('(' + [
 module.exports = function (input, opts) {
   opts = opts || {};
   var locale = opts.locale || 'en-us';
-  var sep = locales[locale.toLowerCase()];
+  var sep = numbersDB[locale.toLowerCase()];
   if (!sep) return input;
 
   return input.replace(numberRegExp, function (match, num, dec) {
