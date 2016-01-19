@@ -37,7 +37,7 @@ Text for transform.
 
 Type: `object`
 
-Locale for proper separator and point symbols.
+Options to pass locale for proper separator and point symbols.
 
 ## License
 
