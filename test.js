@@ -1,5 +1,5 @@
 import test from 'ava';
-import numbers from './index.es5';
+import numbers from './index';
 
 test('fix integer', t => {
   t.is(numbers('215', {locale: 'en-us'}), '215');
