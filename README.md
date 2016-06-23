@@ -17,10 +17,10 @@ This module is based on [`typographic-numbers-l10n-db`][db] and choosing proper 
 ```js
 import numbers from 'typographic-numbers';
 
-numbers('15215', {locale: 'en-us'}); // 15,215
-numbers('9015215.215', {locale: 'en-us'}); // 9,015,215.215
-numbers('15215 and 15215,215', {locale: 'en-us'}); // 15,215 and 15,215.215
-numbers('9015215.215', {locale: 'ru-ru'}); // 9 015 215,215
+numbers('15215', { locale: 'en-us' }); // 15,215
+numbers('9015215.215', { locale: 'en-us' }); // 9,015,215.215
+numbers('15215 and 15215,215', { locale: 'en-us' }); // 15,215 and 15,215.215
+numbers('9015215.215', { locale: 'ru-ru' }); // 9 015 215,215
 ```
 
 ## API
