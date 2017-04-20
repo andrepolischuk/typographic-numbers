@@ -1,6 +1,6 @@
 {
   "name": "typographic-numbers",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Micro module for formatting numbers",
   "main": "index.es5.js",
   "jsnext:main": "index.js",
